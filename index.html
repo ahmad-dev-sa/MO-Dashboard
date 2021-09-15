@@ -25,17 +25,18 @@
 <!-------------------------------- sidebar -->
 
 
-         <nav class="sidebar" id="sidebar">
+         <nav class="sidebar active" id="sidebar">
              <div class="sidebar-header">
-              <h3><img src="/img/Moalogopng-50-01.png" alt=""><span>Moda design</span></h3>
+              <h3><img src="/img/Moalogopng-50-01.png" alt=""><span>عنوان النظام</span></h3>
              </div>
 
 
              <ul class="list-unstyled components">
                  <li class="active">
-                    <a href="#" class="dashboard"><i class="material-icons">dashboard</i><span>dashboard</span></a>
+                    <a href="#" class="dashboard"><i class="material-icons">dashboard</i><span>لوحة التحكم</span></a>
                  </li>
                  <div class="small-screen navbar-display">
+                     
                      <li class="dropdown d-lg-none d-md-block d-xl-none d-sm-block">
                          <a href="#homeSubmenu0" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"></a>
                          <ul class="collapse list-unstyled menu" id="homeSubmenu0">
@@ -45,6 +46,9 @@
                              <li><a href="#">You have 5 new Messages</a></li>
                          </ul>
                      </li>
+
+                    
+                    
 
                         <li class=" d-lg-none d-md-block d-xl-none d-sm-block">
                           <a href="#"><i class="material-icons">apps</i><span>apps</span></a>
@@ -65,7 +69,7 @@
                  <li class="dropdown">
                     <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="material-icons">aspect_ratio</i><span>Layouts</span></a>
-                    <ul class="collapse list-unstyled menu" id="#pageSubmenu1">
+                    <ul class="collapse list-unstyled menu" id="pageSubmenu1">
                         <li><a href="#">HOME1</a></li>
                         <li><a href="#">HOME2</a></li>
                         <li><a href="#">HOME3</a></li>
@@ -133,15 +137,7 @@
                     </ul>
                 </li>
 
-                <li class="">
-                    <a href="#"><li class="material-icons">date_range</li><span>copy</span></a>
-                </li>
-                <li class="">
-                    <a href="#"><li class="material-icons">library_books</li><span>calender</span></a>
-                </li>
-
-
-             </ul>
+            </ul>
 
          </nav>
 
@@ -178,6 +174,18 @@
                                   <li><a href="#">You have 4 New Messages</a></li>
                               </ul>
                         </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                          </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="#"><span class="material-icons">apps</span></a>
@@ -348,9 +356,9 @@
                 <div class="col-lg-5 col-md-12">
                     <div class="card" style="min-height: 485">
                         <div class="card-header card-header-text">
-                            <h4 class="card-title">activities></h4>
+                            <h4 class="card-title">activities</h4>
                         </div>
-                    </div>
+                    
                     <div class="card-content">
                         <div class="steamline">
                             <div class="sl-item sl-primary">
@@ -397,7 +405,7 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
             </div>
          </div><!--- Main-content End --------->
 
@@ -435,10 +443,30 @@
     </div>
     
 
-   
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 rtl -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+        $("#sidebar-collapse").on('click', function(){
+            $('#sidebar').toggleClass('active');
+            $('#content').toggleClass('active');
+        });
+
+        $(".more-button, .body-overlay").on('click', function(){
+            $('#sidebar, .body-overlay').toggleClass('show-nav');
+        });
+
+
+    });
+
+    </script>
 
   </body>
 </html>
